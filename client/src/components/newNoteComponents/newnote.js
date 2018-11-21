@@ -8,6 +8,9 @@ import { createnewnote } from '../notesFunctions';
 /*
 This is the new note test, bascilly just post the new notes.
 
+when uploading the image we need to set a state that is going to have the img urls if any
+
+
 */
 class NewNote extends Component {
     constructor(){
@@ -22,8 +25,6 @@ class NewNote extends Component {
                text:''
             }
          };
-
-
     }
 
     

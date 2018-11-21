@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+/*
+    Post request to api, to register new user to database 
+*/
 export const register = newUser => {
     return axios
     .post('api/account/signup', {
@@ -10,9 +13,15 @@ export const register = newUser => {
          email : newUser.email,
          passw : newUser.passw,
     });
-    // .then( res => {
-    //     //res.json({'test': 'account created'});
-    //     console.log('Account Created')
-    // });
 }
 
+/*
+    Post reqest to api, to login in and user authentication 
+*/
+export const loginAccount = User => {
+    return axios
+    .post('api/account/signin', {
+        email: User.email,
+        password: User.password,
+    });
+}
